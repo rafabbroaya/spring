@@ -1,0 +1,1 @@
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS, PHONE_NUMBER) VALUES ('Rafael','Sánchez','rafabbroaya@hotmail.com','(+593)983-502-139')
