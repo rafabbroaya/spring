@@ -1,0 +1,5 @@
+ec\fin\banecuador\encuestas\EncuestasApplication.class
+ec\fin\banecuador\encuestas\negocio\ServicioPregunta.class
+ec\fin\banecuador\encuestas\datos\repositorios\RepositorioPregunta.class
+ec\fin\banecuador\encuestas\web\servicios\ServicioControladorPregunta.class
+ec\fin\banecuador\encuestas\datos\entidades\Pregunta.class

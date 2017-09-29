@@ -1,0 +1,27 @@
+package ec.fin.banecuador.encuestas.web.servicios;
+
+import ec.fin.banecuador.encuestas.datos.entidades.Pregunta;
+import ec.fin.banecuador.encuestas.negocio.ServicioPregunta;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Created by raasanch on 29/09/2017.
+ */
+@RestController
+@RequestMapping(path = "/api")
+public class ServicioControladorPregunta {
+
+  @Autowired
+  ServicioPregunta servicioPregunta;
+
+  @RequestMapping(method = RequestMethod.GET, path = "/preguntas")
+  public Page<Pregunta> obtenerPreguntas(Pageable pageable) {
+    return servicioPregunta.obtenerPreguntas(pageable);
+  }
+
+}
