@@ -2,8 +2,6 @@ package ec.fin.banecuador.encuestas.datos.entidades;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,26 +12,26 @@ import javax.persistence.Table;
 @Table(name = "pregunta")
 public class Pregunta {
 
-  @Id
-  @Column(name = "id")
-  
-  private int id;
-  @Column(name = "texto")
-  private String texto;
+    @Id
+    @Column(name = "id")
+    private int id;
 
-  public long getId() {
-    return id;
-  }
+    @Column(name = "texto")
+    private String texto;
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public long getId() {
+        return id;
+    }
 
-  public String getTexto() {
-    return texto;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public void setTexto(String texto) {
-    this.texto = texto;
-  }
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
 }

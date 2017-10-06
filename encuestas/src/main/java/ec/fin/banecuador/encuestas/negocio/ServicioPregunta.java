@@ -3,8 +3,6 @@ package ec.fin.banecuador.encuestas.negocio;
 import ec.fin.banecuador.encuestas.datos.entidades.Pregunta;
 import ec.fin.banecuador.encuestas.datos.repositorios.RepositorioPregunta;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,15 +11,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServicioPregunta {
 
-  private RepositorioPregunta repositorioPregunta;
+    private RepositorioPregunta repositorioPregunta;
 
-  @Autowired
-  public ServicioPregunta(
-      RepositorioPregunta repositorioPregunta) {
-    this.repositorioPregunta = repositorioPregunta;
-  }
+    @Autowired
+    public ServicioPregunta(
+            RepositorioPregunta repositorioPregunta) {
+        this.repositorioPregunta = repositorioPregunta;
+    }
 
-  public Page<Pregunta> obtenerPreguntas(Pageable pageable) {
-    return repositorioPregunta.findAll(pageable);
-  }
+    public Pregunta obtenerPregunta(Integer id) {
+        return repositorioPregunta.findById(id);
+    }
 }
