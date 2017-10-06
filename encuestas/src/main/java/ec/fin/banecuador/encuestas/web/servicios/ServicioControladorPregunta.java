@@ -19,7 +19,7 @@ public class ServicioControladorPregunta {
     ServicioPregunta servicioPregunta;
 
     @RequestMapping(method = RequestMethod.GET, path = "/pregunta/{id}")
-    public Pregunta obtenerPregunta(@PathVariable int id) {
+    public Pregunta obtenerPregunta(@PathVariable("id") int id) {
         return servicioPregunta.obtenerPregunta(id);
     }
 
