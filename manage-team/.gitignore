@@ -14,6 +14,8 @@ target/
 *.iws
 *.iml
 *.ipr
+frontend/src/main/angular2/node_modules
+frontend/src/main/angular2/node
 
 ### NetBeans ###
 nbproject/private/
